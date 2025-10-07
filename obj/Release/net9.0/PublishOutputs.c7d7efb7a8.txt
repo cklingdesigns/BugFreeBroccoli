@@ -1,0 +1,11 @@
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\publish\publish\web.config
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\publish\publish\BugFreeBroccoli.staticwebassets.endpoints.json
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\publish\publish\publish\BugFreeBroccoli.staticwebassets.endpoints.json
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\publish\publish\publish\publish\BugFreeBroccoli.staticwebassets.endpoints.json
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\publish\publish\publish\publish\wwwroot\sample-data\weather.json
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\publish\publish\publish\publish\wwwroot\_framework\blazor.boot.json
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\publish\publish\publish\wwwroot\sample-data\weather.json
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\publish\publish\publish\wwwroot\_framework\blazor.boot.json
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\publish\publish\wwwroot\sample-data\weather.json
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\publish\publish\wwwroot\_framework\blazor.boot.json
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\publish\web.config
