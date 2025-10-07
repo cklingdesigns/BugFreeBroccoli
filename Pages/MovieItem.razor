@@ -1,0 +1,63 @@
+<div class="col-md-6 col-lg-4 col-xl-3 mb-2">
+    <div class="card movie-card position-relative">
+        <a href="/MovieReview/@Movie?.Id" style="text-decoration:none; color:inherit;">
+            <img class="img-thumbnail" src="@Movie?.ImageUrl" alt="@Movie?.Title" />
+            <div class="card-body">
+                <h2 class="text-center">@Movie?.Title</h2>
+                <p class="card-text">
+                    @(Movie?.Description?.Length > 100 
+                        ? Movie.Description.Substring(0, 100) + "..." 
+                        : Movie?.Description)
+                </p>
+            </div>
+        </a>
+
+        <!-- 🎬 Play Button Overlay -->
+        @if (!string.IsNullOrEmpty(Movie?.TrailerUrl))
+        {
+            <button class="play-btn" @onclick="ShowTrailerModal">▶</button>
+        }
+    </div>
+</div>
+
+<!-- 🎥 Trailer Modal -->
+@if (ShowModal && !string.IsNullOrEmpty(Movie?.TrailerUrl))
+{
+    <div class="modal-overlay" @onclick="CloseTrailerModal">
+        <div class="modal-content" @onclick:stopPropagation="true">
+            <button class="close-button" @onclick="CloseTrailerModal">✕</button>
+            <iframe width="100%" height="400"
+                    src="@($"{EmbedTrailerUrl(Movie.TrailerUrl)}?autoplay=1&mute=1&rel=0&modestbranding=1")"
+                    title="@($"{Movie?.Title} Trailer")"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public MovieModel? Movie { get; set; }
+
+    private bool ShowModal { get; set; }
+
+    private void ShowTrailerModal()
+    {
+        ShowModal = true;
+    }
+
+    private void CloseTrailerModal()
+    {
+        ShowModal = false;
+        StateHasChanged();
+    }
+
+    private string EmbedTrailerUrl(string youtubeUrl)
+    {
+        // Convert YouTube watch URL to embed format
+        if (string.IsNullOrEmpty(youtubeUrl)) return string.Empty;
+        return youtubeUrl.Replace("watch?v=", "embed/").Split('&')[0];
+    }
+}

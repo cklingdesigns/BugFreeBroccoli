@@ -1,0 +1,290 @@
+﻿@page "/"
+
+@inject IMovieReviewService MovieReviewService
+@inject IJSRuntime JS
+
+<PageTitle>Cklingdesigns Home</PageTitle>
+
+<div class="movie-header d-flex align-items-center justify-content-between flex-wrap mb-3">
+    <h1 class="mb-2 mb-md-0">Movies</h1>
+    <div class="selections">
+        @if (!string.IsNullOrEmpty(Genre) && Genre != "All")
+        {
+            <span> Genre <span>@Genre</span></span>
+        } else {
+            <span> Genre <span>All</span></span>
+        }
+        @if (!string.IsNullOrEmpty(Franchise) && Franchise != "All")
+        {
+            <span> Franchise <span>@Franchise</span></span>
+        } else
+        {
+            <span> Franchise <span>All</span></span>
+        }
+        <span> Page Size <span>@PageSize</span></span>
+        <span> Page <span>@CurrentPage</span></span>
+    </div>
+</div>
+@if (Movies is null)
+{
+    <h2>Loading...</h2>
+}
+else
+{
+    <!-- Pagination Controls -->
+    <nav>
+        <ul class="pagination">
+            <li class="page-item @(CurrentPage == 1 ? "disabled" : "")">
+                <button class="page-link" @onclick="PrevPage">Previous</button>
+            </li>
+
+            @for (int i = 1; i <= TotalPages; i++)
+            {
+                var pageNumber = i; <!-- local copy fixes closure issue -->
+                <li class="page-item @(pageNumber == CurrentPage ? "active" : "")">
+                    <button class="page-link" @onclick="() => GoToPage(pageNumber)">
+                        @pageNumber
+                    </button>
+                </li>
+            }
+
+            <li class="page-item @(CurrentPage == TotalPages ? "disabled" : "")">
+                <button class="page-link" @onclick="NextPage">Next</button>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="mb-3 d-flex flex-wrap align-items-center gap-2">
+        <div class="form-floating">
+            <button type="button"
+                    class="btn btn-lg @(CurrentSort == "titleAsc" ? "btn-primary" : "btn-outline-primary") me-2"
+                    @onclick="() => SortMovies(true)">
+                Title (A–Z)
+            </button>
+
+            <button type="button"
+                    class="btn btn-lg @(CurrentSort == "titleDesc" ? "btn-primary" : "btn-outline-primary") me-3"
+                    @onclick="() => SortMovies(false)">
+                Title (Z–A)
+            </button>
+        </div>
+        <div class="form-floating">
+            <select class="form-select" style="min-width: 150px;" aria-label="Movies Per Page" @bind="PageSize">
+                <option value="8">8</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+            <label for="floatingSelect">Movies Per Page</label>
+        </div>
+        <div class="form-floating">
+            <select class="form-select" aria-label="Franchise" @bind="Franchise">
+                <option value="" selected>All</option>  <!-- placeholder for floating label -->
+                <option value="DC Comics">DC Comics</option>   
+                <option value="Jurassic Park">Jurassic Park</option>
+                <option value="MCU">MCU</option>
+                <option value="Star Wars">Star Wars</option>
+                <option value="Terminator">Terminator</option>
+                <option value="The Lord of the Rings">The Lord of the Rings</option>
+                <option value="The Matrix">The Matrix</option>
+            </select>
+            <label for="floatingSelect">Franchise</label>
+        </div>
+        <div class="form-floating">
+            <select class="form-select" aria-label="Genre" @bind="Genre">
+                <option value="" selected>All</option>  <!-- placeholder for floating label -->
+                <option value="Action">Action</option>
+                <option value="Drama">Drama</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Medieval">Medieval</option>
+                <option value="Military">Military</option>
+                <option value="Mob/Gangster">Mob/Gangster</option>
+                <option value="Historical Drama">Historical Drama</option>
+                <option value="Sci-Fi">Sci-Fi</option>   
+                <option value="Superhero">Superhero</option>
+                <option value="Western">Western</option>            
+            </select>
+            <label for="floatingSelect">Genre</label>
+        </div>
+    </div>
+
+    <!-- Movies for current page -->
+    @for (int x = 0; x < (PagedMovies.Count + 3) / 4; x++)
+    {
+        IEnumerable<MovieModel>? movieGroup = PagedMovies.Skip(x * 4).Take(4);
+
+        <div class="row mb-3">
+            @foreach (MovieModel movie in movieGroup)
+            {
+                <MovieItem @key="movie.Id" Movie="@movie" />
+            }
+        </div>
+    }
+
+    <!-- Pagination Controls -->
+    <nav>
+        <ul class="pagination">
+            <li class="page-item @(CurrentPage == 1 ? "disabled" : "")">
+                <button class="page-link" @onclick="PrevPage">Previous</button>
+            </li>
+
+            @for (int i = 1; i <= TotalPages; i++)
+            {
+                var pageNumber = i; <!-- local copy fixes closure issue -->
+                <li class="page-item @(pageNumber == CurrentPage ? "active" : "")">
+                    <button class="page-link" @onclick="() => GoToPage(pageNumber)">
+                        @pageNumber
+                    </button>
+                </li>
+            }
+
+            <li class="page-item @(CurrentPage == TotalPages ? "disabled" : "")">
+                <button class="page-link" @onclick="NextPage">Next</button>
+            </li>
+        </ul>
+    </nav>
+}
+
+@code {
+    private List<MovieModel> AllMovies = new();
+    private List<MovieModel>? Movies; // Sorted movies
+    private List<MovieModel> PagedMovies = new(); // Current page movies
+
+    private string CurrentSort = "titleAsc";
+
+    private int CurrentPage = 1;
+    private int _pageSize = 8; // Default per page
+    private int PageSize
+    {
+        get => _pageSize;
+        set
+        {
+            if (_pageSize != value)
+            {
+                _pageSize = value;
+                CurrentPage = 1; // reset to first page when size changes
+                UpdatePagedMovies();
+            }
+        }
+    }
+    private string _franchise = string.Empty;
+    private string Franchise
+    {
+        get => _franchise;
+        set
+        {
+            if (_franchise != value)
+            {
+                _franchise = value;
+                CurrentPage = 1;
+                UpdatePagedMovies();
+            }
+        }
+    }
+    private string _genre { get; set; } = string.Empty;
+    private string Genre
+    {
+        get => _genre;
+        set
+        {
+            if (_genre != value)
+            {
+                _genre = value;
+                CurrentPage = 1;
+                UpdatePagedMovies();
+            }
+        }
+    }
+    private int TotalPages => (int)Math.Ceiling((double)(Movies?.Count ?? 0) / PageSize);
+
+    private void FilterChanged(ChangeEventArgs e)
+    {
+        CurrentPage = 1; // Reset to first page whenever filter changes
+        UpdatePagedMovies();
+    }
+    protected override void OnInitialized()
+    {
+        AllMovies = MovieReviewService?.GetMovies()?.ToList() ?? new List<MovieModel>();
+
+        Movies = AllMovies
+            .OrderBy(m => (m.Title ?? string.Empty).Trim(), StringComparer.OrdinalIgnoreCase)
+            .ToList();
+
+        UpdatePagedMovies();
+    }
+
+    private async Task LogToBrowser(string message)
+    {
+        await JS.InvokeVoidAsync("console.log", message);
+    }
+
+    private void SortMovies(bool ascending)
+    {
+        Movies = ascending
+            ? AllMovies.OrderBy(m => (m.Title ?? string.Empty).Trim(), StringComparer.OrdinalIgnoreCase).ToList()
+            : AllMovies.OrderByDescending(m => (m.Title ?? string.Empty).Trim(), StringComparer.OrdinalIgnoreCase).ToList();
+
+        CurrentSort = ascending ? "titleAsc" : "titleDesc";
+        CurrentPage = 1; // reset to first page
+        UpdatePagedMovies();
+
+        _ = LogToBrowser("Sorted: " + string.Join(" | ", Movies.Select(m => m.Title)));
+    }
+
+    private void UpdatePagedMovies()
+        {
+        if (AllMovies == null) return;
+
+        // Start with the sorted list
+        IEnumerable<MovieModel> filtered = Movies ?? AllMovies;
+
+        // Apply Franchise filter if selected
+        if (!string.IsNullOrEmpty(Franchise))
+            filtered = filtered.Where(m => m.Franchise == Franchise);
+
+        // Apply Genre filter if selected
+        if (!string.IsNullOrEmpty(Genre))
+            filtered = filtered.Where(m => m.Genre == Genre);
+
+        // Convert to list for pagination
+        PagedMovies = filtered
+            .Skip((CurrentPage - 1) * PageSize)
+            .Take(PageSize)
+            .ToList();
+        }
+
+    private void GoToPage(int page)
+    {
+        if (page < 1 || page > TotalPages) return;
+        CurrentPage = page;
+        UpdatePagedMovies();
+    }
+
+    private void NextPage()
+    {
+        if (CurrentPage < TotalPages)
+        {
+            CurrentPage++;
+            UpdatePagedMovies();
+        }
+    }
+
+    private void PrevPage()
+    {
+        if (CurrentPage > 1)
+        {
+            CurrentPage--;
+            UpdatePagedMovies();
+        }
+    }
+
+    private void PageSizeChanged(ChangeEventArgs e)
+    {
+        if (int.TryParse(e.Value?.ToString(), out var newSize))
+        {
+            PageSize = newSize;
+            CurrentPage = 1; // reset to page 1 when size changes
+            UpdatePagedMovies();
+        }
+    }
+}

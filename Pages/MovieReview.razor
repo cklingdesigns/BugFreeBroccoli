@@ -1,0 +1,38 @@
+@page "/MovieReview/{Id}"
+@inject IMovieReviewService MovieReviewService
+<h3>Movie Review for @MovieItem?.Title</h3>
+
+@if (MovieItem == null)
+{
+    <h3>Loading...</h3>
+}
+else
+{
+    <div class="row">
+        <div class="col-6">
+            <div class="trailer-container">
+                <img src="@MovieItem?.ImageUrl" alt="@MovieItem?.Title" />
+            </div>
+        </div>
+
+        <div class="col-6">
+            <p>@MovieItem?.Description</p>
+
+            <div class="card mt-3">
+                <div class="card-header">
+                    Review
+                </div>
+                <div class="card-body">
+                    @MovieItem?.Review
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public string? Id { get; set; }
+
+    private MovieModel? MovieItem { get; set; }
+
+}
