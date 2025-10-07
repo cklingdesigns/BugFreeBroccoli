@@ -560,6 +560,56 @@ namespace BugFreeBroccoli.Services
                 Genre = "Sci-Fi",
                 Franchise = "Predator",
                 TrailerUrl = "https://www.youtube.com/watch?v=HkMNOlYp6rY"
+            },
+            new(){
+                Id=60,
+                Title = "Braveheart",
+                Description = "William Wallace is the medieval Scottish patriot who is spurred into revolt against the English when the love of his life is slaughtered. Leading his army into battles that become a war, his advance into England threatens King Edward I's throne before he is captured and executed, but not before becoming a symbol for a free Scotland.",
+                ImageUrl = "/images/movies/Braveheart.png",
+                Review = "This was a great movie!",
+                Genre = "Historical Drama",
+                Franchise = "N/A",
+                TrailerUrl = "https://www.youtube.com/watch?v=wj0I8xVYlWQ"
+            },
+            new(){
+                Id=61,
+                Title = "The Matrix Reloaded",
+                Description = "Neo and the rebel leaders estimate that they have 72 hours until 250,000 probes discover Zion and destroy it. During this, Neo must decide how he can save Trinity from a dark fate in his dreams. Meanwhile, they continue to fight against the machines and seek the help of the Oracle, who provides cryptic guidance about the path ahead.",
+                ImageUrl = "/images/movies/TheMatrixReloaded.png",
+                Review = "This was a great movie!",
+                Genre = "Sci-Fi",
+                Franchise = "The Matrix",
+                TrailerUrl = "https://www.youtube.com/watch?v=kYzz0FSgpSU"
+            },
+            new(){
+                Id=62,
+                Title = "The Matrix Revolutions",
+                Description = "The human city of Zion prepares for war as the machines, led by a massive army of Sentinels, approach to destroy it. Neo, trapped in a limbo between the Matrix and the real world, must find a way to return and confront Agent Smith, who has become a rogue program threatening both worlds. The film culminates in an epic battle between humans and machines, with Neo making a sacrifice to bring peace between the two.",
+                ImageUrl = "/images/movies/TheMatrixRevolutions.png",
+                Review = "This was a great movie!",
+                Genre = "Sci-Fi",
+                Franchise = "The Matrix",
+                TrailerUrl = "https://www.youtube.com/watch?v=hMbexEPAOQI"
+            },
+            new(){
+                Id=63,
+                Title = "The Matrix Resurrections",
+                Description = "In a world where reality is not what it seems, Thomas Anderson, once again known as Neo, lives a seemingly ordinary life as a successful video game developer. However, he begins to question his reality when he encounters Trinity, who also appears to be living a different life. As Neo delves deeper into the mysteries of the Matrix, he must confront new challenges and rediscover his true identity as 'The One' to save both the real world and the simulated reality from a new threat.",
+                ImageUrl = "/images/movies/TheMatrixResurrections.png",
+                Review = "This was a great movie!",
+                Genre = "Sci-Fi",
+                Franchise = "The Matrix",
+                TrailerUrl = "https://www.youtube.com/watch?v=9ix7TUGVYIo"
+            },
+            new(){
+                Id=64,
+                Title = "Saving Private Ryan",
+                Description = "As U.S. troops storm the beaches of Normandy on D-Day, three brothers lie dead on the battlefield, with a fourth trapped behind enemy lines. Ranger captain John Miller and his squad are given an impossible mission: find Private James Ryan and bring him home.",
+                ImageUrl = "/images/movies/SavingPrivateRyan.png",
+                Review = "This was a great movie!",
+                Genre = "War",
+                Franchise = "N/A",
+                TrailerUrl = "https://www.youtube.com/watch?v=RYID71hYHzg"
             }
         };
 
