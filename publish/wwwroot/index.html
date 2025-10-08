@@ -1,27 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BugFreeBroccoli</title>
-
-  <base href="/" data-dev-base="/" data-prod-base="/BugFreeBroccoli/" />
-
-  <script>
-    const base = document.querySelector('base');
-    if (location.hostname.includes('github.io')) {
-        base.setAttribute('href', base.getAttribute('data-prod-base'));
-    } else {
-        base.setAttribute('href', base.getAttribute('data-dev-base'));
-    }
-  </script>
-
-  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/app.css" />
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link href="BugFreeBroccoli.styles.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BugFreeBroccoli</title>
+    <base href="/BugFreeBroccoli/" />
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="BugFreeBroccoli.styles.css" rel="stylesheet" />
 </head>
-
 
 <body>
     <div id="app">
@@ -37,6 +25,7 @@
         <a href="." class="reload">Reload</a>
         <span class="dismiss">🗙</span>
     </div>
-    <script defer src="_framework/blazor.webassembly.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
 </body>
+
 </html>
