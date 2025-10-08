@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BugFreeBroccoli")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b8d93c61bcdb279134e43ca2fa481a60aad0e72")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74ceadcb2519acc7e2656fcfdaa80722b0d81a5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BugFreeBroccoli")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BugFreeBroccoli")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
