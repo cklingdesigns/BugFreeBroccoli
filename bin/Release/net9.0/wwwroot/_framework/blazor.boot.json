@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BugFreeBroccoli",
   "resources": {
-    "hash": "sha256-LuuZs2imlsDNbU2nNHdRZOqOeDuW6KPylMbFs9MzW3I=",
+    "hash": "sha256-tuthqaD3PUza1SmUvR5zN2DokydArpnW+CLo/1WZOsM=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.tnyc7xpluy.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.t32damlu4o.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -201,8 +201,8 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "BugFreeBroccoli.kodhebjkos.wasm": "BugFreeBroccoli.wasm",
-      "BugFreeBroccoli.cpymgdy3xu.pdb": "BugFreeBroccoli.pdb"
+      "BugFreeBroccoli.vwpu1idbrh.wasm": "BugFreeBroccoli.wasm",
+      "BugFreeBroccoli.qd30jqm551.pdb": "BugFreeBroccoli.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.50iqa8w3ys.js": "sha256-pQdXuxfVeqYHOwd5HUM2ERd7OnXirj9JTF37b6OdTAc="
@@ -412,10 +412,10 @@
       "WindowsBase.361km0836k.wasm": "sha256-FacUCEIJYTnbOWgX/R9QP2QnurqRZwRIkDAH0N9z69s=",
       "mscorlib.qiu3j3msqk.wasm": "sha256-QvztpxTOEw4aMIl7zP3QtsPLNv/IWaK5wq22J4ReGrA=",
       "netstandard.lp03u0xxi4.wasm": "sha256-WVQsxULiAiEbyXLKolS7txnWVT82SsvsuMe4jJ+SqqI=",
-      "BugFreeBroccoli.kodhebjkos.wasm": "sha256-hGnb/sLcZrQGhdvrKaLVvsOTPtG5dHYEyVSxCub7AvU="
+      "BugFreeBroccoli.vwpu1idbrh.wasm": "sha256-UWgxKQUWmUX9Dc9mrzebJznKAKhtCnDJb9fDaUT+3u0="
     },
     "pdb": {
-      "BugFreeBroccoli.cpymgdy3xu.pdb": "sha256-0GK3c1mzWTy6WjhqZBuMJMWWPZUkSV7l954jCNfws40="
+      "BugFreeBroccoli.qd30jqm551.pdb": "sha256-Hkz3kSuoMXBcqNTArQ24D4LAJKKng06bM8mVmurVv7o="
     }
   },
   "cacheBootResources": true,

@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BugFreeBroccoli",
   "resources": {
-    "hash": "sha256-g9uBqaunMijAMz609bHYZtz+3ee1gEJXVPDRXak0maU=",
+    "hash": "sha256-CJRMOn7iWWGHT1UmycMnqGT4pG3q31tgPmks/z0dUMc=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.gy6nap3grh.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.jlqoi521qh.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
@@ -34,7 +34,7 @@
       "System.Text.Json.rx0h7tjbo1.wasm": "System.Text.Json.wasm",
       "System.Text.RegularExpressions.qhcsf9u1lx.wasm": "System.Text.RegularExpressions.wasm",
       "System.Private.CoreLib.ki8t0wgdks.wasm": "System.Private.CoreLib.wasm",
-      "BugFreeBroccoli.kodhebjkos.wasm": "BugFreeBroccoli.wasm",
+      "BugFreeBroccoli.vwpu1idbrh.wasm": "BugFreeBroccoli.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.50iqa8w3ys.js": "dotnet.native.js",
       "dotnet.native.pk43x8e436.wasm": "dotnet.native.wasm",
@@ -91,7 +91,7 @@
       "System.Text.Encodings.Web.yosxql6jn5.wasm": "sha256-fgKqJw0Vkd2XqqB/Aj8WLXZK9/DPfEX9FcsrTzQTRFU=",
       "System.Text.Json.rx0h7tjbo1.wasm": "sha256-/wm7wuEu4fJd08nlsDi+AMShHWYk/vY2Zdbn/rw+5q0=",
       "System.Text.RegularExpressions.qhcsf9u1lx.wasm": "sha256-wn7A6lyHyUX6ncCXE68PB0fgNpaI8xcNLGHt7qHCuQo=",
-      "BugFreeBroccoli.kodhebjkos.wasm": "sha256-hGnb/sLcZrQGhdvrKaLVvsOTPtG5dHYEyVSxCub7AvU="
+      "BugFreeBroccoli.vwpu1idbrh.wasm": "sha256-UWgxKQUWmUX9Dc9mrzebJznKAKhtCnDJb9fDaUT+3u0="
     }
   },
   "cacheBootResources": true,

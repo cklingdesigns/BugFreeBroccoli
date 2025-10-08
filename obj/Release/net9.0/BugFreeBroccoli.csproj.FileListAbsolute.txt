@@ -199,8 +199,6 @@ C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framewo
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat
-C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\BugFreeBroccoli.kodhebjkos.wasm
-C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\BugFreeBroccoli.cpymgdy3xu.pdb
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\blazor.boot.json
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\blazor.webassembly.js.gz
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.tnyc7xpluy.wasm.gz
@@ -403,8 +401,6 @@ C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framewo
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat.gz
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat.gz
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat.gz
-C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\BugFreeBroccoli.kodhebjkos.wasm.gz
-C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\BugFreeBroccoli.cpymgdy3xu.pdb.gz
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\blazor.boot.json.gz
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\BugFreeBroccoli.staticwebassets.runtime.json
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\BugFreeBroccoli.staticwebassets.endpoints.json
@@ -821,7 +817,6 @@ C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\blazor.build.boo
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\blazor.boot.json
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\g2t8onysk1-r2j7a3hvth.gz
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\lk5kvh57dk-smiz1r2tg2.gz
-C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\w17mwfu0yf-nlqy9fvn8d.gz
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\axgrjpejfl-t1cqhe9u97.gz
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\57m5p1fgbq-c2jlpeoesf.gz
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\anaoreycsm-sejl45xvog.gz
@@ -1070,9 +1065,6 @@ C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\1nibu
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\r9oaaf3v4n-tjcz0u77k5.gz
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\nvhm1dygf6-tptq2av103.gz
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\6czfs366w7-lfu7j35m59.gz
-C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\1y28zgpvbs-kodhebjkos.gz
-C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\cds98ewfrn-cpymgdy3xu.gz
-C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\4hwqcd88q6-srpfnpuleo.gz
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\staticwebassets.build.json
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\staticwebassets.build.json.cache
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\staticwebassets.development.json
@@ -1082,3 +1074,15 @@ C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\BugFreeBroccoli.
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\refint\BugFreeBroccoli.dll
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\BugFreeBroccoli.pdb
 C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\ref\BugFreeBroccoli.dll
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\BugFreeBroccoli.vwpu1idbrh.wasm
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\BugFreeBroccoli.qd30jqm551.pdb
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\BugFreeBroccoli.vwpu1idbrh.wasm.gz
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\wwwroot\_framework\BugFreeBroccoli.qd30jqm551.pdb.gz
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\publish\web.config
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\publish\BugFreeBroccoli.staticwebassets.endpoints.json
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\publish\wwwroot\sample-data\weather.json
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\bin\Release\net9.0\publish\wwwroot\_framework\blazor.boot.json
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\w17mwfu0yf-dt8qiakp8c.gz
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\1y28zgpvbs-vwpu1idbrh.gz
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\cds98ewfrn-qd30jqm551.gz
+C:\Users\Corey Kling\Desktop\BugFreeBroccoli\obj\Release\net9.0\compressed\4hwqcd88q6-hpqoef40lb.gz
